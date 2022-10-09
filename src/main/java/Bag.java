@@ -18,7 +18,7 @@ public abstract class Bag {
     private String color;
     private int numberOfContents;
     private int capacity;
-    private final ArrayList<String> contents;
+    private ArrayList<String> contents;
 
 
 
@@ -88,7 +88,6 @@ public abstract class Bag {
             numberOfContents += 1;
         }
     }
-    // Boolean
 
 
     /**
