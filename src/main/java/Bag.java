@@ -32,9 +32,9 @@ public abstract class Bag {
      * be empty (e.g. numberOfContents is 0 and an empty String array for
      * its contents.)
      */
-    public Bag(String color, int capacity){
-        this.color = color;
-        this.capacity = capacity;
+    public Bag(String Bagcolor, int Bagcapacity){
+        this.color = Bagcolor;
+        this.capacity = Bagcapacity;
         this.numberOfContents = 0;
         this.contents = new ArrayList<String>();
     }
@@ -65,8 +65,8 @@ public abstract class Bag {
      * TODO: Create a setter function called setColor which sets the
      *       color of this bag to the given color.
      */
-    public void setColor(String otherColor) {
-        this.color = otherColor;
+    public void setColor(String Color) {
+        this.color = Color;
     }
 
 
@@ -102,9 +102,10 @@ public abstract class Bag {
      */
     public String popItem(){
         if(capacity != 0){
-            String lastItem = contents.get(contents.size() - 1);
-            contents.remove(lastItem);
-            numberOfContents -=1;
+            int lastIndex = contents.size() - 1;
+            String lastItem = contents.get(lastIndex);
+            contents.remove(lastIndex);
+            numberOfContents -= 1;
             return lastItem;
         }
         return null;
